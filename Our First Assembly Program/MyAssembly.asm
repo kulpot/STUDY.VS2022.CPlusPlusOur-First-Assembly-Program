@@ -6,4 +6,10 @@
 
 .code
 
+doit proc
+
+	mov eax, 8
+
+doit endp
+
 end
