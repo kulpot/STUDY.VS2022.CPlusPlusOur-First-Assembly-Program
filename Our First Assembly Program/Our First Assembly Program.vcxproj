@@ -129,6 +129,14 @@
   <ItemGroup>
     <ClCompile Include="Mainer.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="MyAssembly.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ml /c /Cx /cof "%(FullPath)"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Assembling our assembly code.......</Message>
+    </CustomBuild>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
