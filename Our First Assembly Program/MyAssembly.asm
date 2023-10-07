@@ -9,6 +9,7 @@
 doit proc
 
 	mov eax, 8
+	mov ebx, eax
 
 doit endp
 
